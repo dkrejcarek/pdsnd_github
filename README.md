@@ -7,15 +7,20 @@
 ### Description
 This app allows the user to review important statics of bikeshare data from different cities.  
 
-These statitics include:
+Stats Included:
+
+1) Time
     Most Common Day of the week
     MOst Common Start Hour
     Most Common End Hour
+2) Station
     Most Coomon Start Stations
     Most Common End Station
     Most Common Station Combo
+3) Trip Duration
     Total Rental Time
     Average Rental Time
+4) User Stats 
     User Type
     User Sex
     Oldest Birth Year
