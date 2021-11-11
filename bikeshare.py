@@ -62,7 +62,9 @@ def get_filters():
 
 
 def clean_data(df):
-    """ This will clean the data as needed """
+    """ This will clean the data as needed 
+    Args:
+        (df) dataframe - The dataframe of data"""
 
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -113,8 +115,18 @@ def load_data(city, month, day):
     return df
 
 
+def print_most_common_data(key, value):
+    """ Prints out a Most common message """
+    print("The most common {} is {}".format(key, value)
+
+          
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """
+    Displays statistics on the most frequent times of travel.
+    
+    Args:
+        (df) dataframe - The dataframe of data
+    """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -155,10 +167,15 @@ def time_stats(df):
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
-
+   
+    
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """
+    Displays statistics on the most popular stations and trip.
+    
+    Args:
+        (df) dataframe - The dataframe of data
+    """
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -180,7 +197,13 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """
+    Displays statistics on the total and average trip duration.
+    
+    Args:
+        (df) dataframe - The dataframe of data
+    """
+    
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -199,7 +222,11 @@ def trip_duration_stats(df):
 
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+    
+    Args:
+        (df) dataframe - The dataframe of data
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
