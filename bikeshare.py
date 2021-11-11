@@ -147,23 +147,23 @@ def time_stats(df):
         common_day_of_week = df['day_of_week'].mode()[0]
     except:
         common_day_of_week = 'None'
-    
-    print('The most common day of the week is {}'.format(common_day_of_week))
+        
+    print_most_common_data('week', common_day_of_week)
     # TO DO: display the most common start hour
     try:
         df['start_hour'] = df['Start Time'].dt.hour
         common_start_hour = df['start_hour'].mode()[0]
     except:
         common_start_hour = 'None'
-        
-    print('The most common start hour is {}'.format(common_start_hour))
+          
+    print_most_common_data('Start Hour', common_start_hour)    
+    
     try:
         common_end_hour = df['End Time'].dt.hour.mode()[0]
     except:
         common_end_hour = 'None'
-        
-    print('The most common End hour is {}'.format(common_end_hour))
-    
+    print_most_common_data('End Hour', common_start_hour)    
+
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
